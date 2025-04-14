@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'path_publisher_node = pure_pursuit_controller.path_publisher_node:main',
             'pure_pursuit_node = pure_pursuit_controller.pure_pursuit_controller:main',
+            'pure_pursuit_node_real = pure_pursuit_controller.pure_pursuit_controller_real:main',
         ],
     },
 )

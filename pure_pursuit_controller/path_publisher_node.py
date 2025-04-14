@@ -11,7 +11,7 @@ class PathPublisher(Node):
     def __init__(self):
         super().__init__('path_publisher')
         self.publisher_ = self.create_publisher(Path, 'planned_path', 10)
-        timer_period = 2.0  # seconds
+        timer_period = 0.05  # seconds (20hz)
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
         # Define a list of coordinates (x, y) for the planned path
