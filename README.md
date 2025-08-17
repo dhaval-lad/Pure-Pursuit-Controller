@@ -4,7 +4,8 @@
 The `pure_pursuit_controller` package is responsible for subscribing to `/planned_path` and `/odom`, and publishing `/cmd_vel` to follow the path using the Pure Pursuit controller.
 
 ## Dependencies
-- ROS 2
+- [Ubuntu 22.04](https://releases.ubuntu.com/22.04/)
+- [ROS 2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 - A robot with odometry data
 
 ## Installation Instructions
@@ -23,7 +24,7 @@ The `pure_pursuit_controller` package is responsible for subscribing to `/planne
 This can be varified either in simulation or in real GrassHopper robot. 
 ### Simulation Setup
 To verify that everything is working in simulation:
-1. Run the Gazebo world with the robot in it. You can use GrassHopper simulation model available at: [https://github.com/dhaval-lad/grasshopper_gazebo.git](https://github.com/dhaval-lad/grasshopper_gazebo.git)
+1. Run the Gazebo world with the robot in it. You can use GrassHopper simulation model available at: [GrassHopper Gazebo](https://github.com/dhaval-lad/grasshopper_gazebo.git)
 2. Change the topic name of `/odom` in `pure_pursuit_controller.py` to match the topic name in your environment.
 3. Adjust the `self.coordinates` in `path_publisher_node.py` according to your robot's initial position in the world.
 4. Rebuild the package:
